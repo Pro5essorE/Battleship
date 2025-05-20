@@ -1,7 +1,8 @@
 /*
  * This class represents a game of Battleship. It contains the 
  *
- * Code written by Toryn Bieri & Ethan Benzaquen. (Maybe we should have some sort of indicator that shows who certain parts of code were written by? - Toryn)
+ * Code written by Toryn Bieri & Ethan Benzaquen. (Maybe we should have some sort of indicator that shows who certain parts of code were written by? 
+  *                                                We'll also need to find a way to share what parts of code we updated in the code itself. - Toryn)
  */
 
 import java.util.*;
