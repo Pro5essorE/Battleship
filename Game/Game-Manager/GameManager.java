@@ -5,6 +5,7 @@
  */
 
 import java.util.*;
+import Player.*;
 //Insert other imports here when we figure out what we will need.
 
 public class GameManager{
@@ -19,7 +20,13 @@ public class GameManager{
    
    private Player player2;
    
-   private Display gameDisplay;
+//    private Display gameDisplay;
+
+   private boolean isGameOver;
+   
+   private boolean isReady;
+   
+   
    
    /*
     * Creates a new instance of a GameManager object, updating the instance variables by using the objects in the parameters.
@@ -28,7 +35,7 @@ public class GameManager{
     * @param player2 The second player that will be participating in the game.
     * @param display The window where Battleship will be played.
     */
-   public GameManager(Player player1, Player player2, Display display){
+   public GameManager(Player player1, Player player2){
       gameRunning = false;
       
       this.player1 = player1;
@@ -36,14 +43,14 @@ public class GameManager{
       
       currentPlayer = player1;
       
-      gameDisplay = display;
+//       gameDisplay = display;
    }
    
    
    /*
     * Updates the currentPlayer object, so that it is the same as the player whose turn it is supposed to be.
     */
-   public void switchTurns(){
+   private void switchTurns(){
       if(currentPlayer.equals(player1)){
          currentPlayer = player2;
       }
@@ -52,7 +59,12 @@ public class GameManager{
       }
    }
    
-   private void hitPos(){
+   private boolean isGameOver(){
+      return false;
+   }
+   
+   
+   private void SendHit(){
       
    }
    
@@ -61,6 +73,8 @@ public class GameManager{
     */
    public void startGame(){
       gameRunning = true;
+      
+      
    }
 
 
