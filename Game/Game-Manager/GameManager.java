@@ -1,8 +1,7 @@
 /*
  * This class represents a game of Battleship. It contains the 
  *
- * Code written by Toryn Bieri & Ethan Benzaquen. (Maybe we should have some sort of indicator that shows who certain parts of code were written by? 
-  *                                                We'll also need to find a way to share what parts of code we updated in the code itself. - Toryn)
+ * Code written by Toryn Bieri & Ethan Benzaquen. (Maybe we should have some sort of indicator that shows who certain parts of code were written by?)
  */
 
 import java.util.*;
@@ -53,25 +52,15 @@ public class GameManager{
       }
    }
    
-                              
-   /*                                           Maybe we could make it color based? Like the spaces meant to represent water are light blue. May have to discuss this with everyone later on. - Toryn
-    *                                           v
-    * Creates a grid where each space has the default value (which represents water) assigned to it.
-    *
-    *
-    * CANNOT BE COMPLETED UNTIL THE GRID, SQUARE, SHIP, AND OTHER CLASSES ARE COMPLETED... i think.
-    */
-   public Grid createEmptyBoard(Grid gridToFill){
-      Grid rtrndGrid = gridToFill;
+   private void hitPos(){
       
-      return rtrndGrid;
    }
    
    /*
     * Starts the game of Battleship.
     */
    public void startGame(){
-   
+      gameRunning = true;
    }
 
 
