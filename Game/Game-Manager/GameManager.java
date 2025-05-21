@@ -14,7 +14,9 @@ public class GameManager{
    private boolean gameRunning;
    
    //Contains either the player1 or player2 object, depending on whose turn it is supposed to be. Probably will only be used in the switchTurns method.
-   private Player currentPlayer; //Maybe we could change it to String or int instead?
+   // private Player currentPlayer; //Maybe we could change it to String or int instead?
+   
+   private int currentTurn;
    
    private Player player1; 
    
@@ -41,26 +43,21 @@ public class GameManager{
       this.player1 = player1;
       this.player2 = player2;
       
-      currentPlayer = player1;
-      
-//       gameDisplay = display;
+      currentTurn = 1;      
+//       gameDisplay = display; <-----Commented out because I (Toryn) currently do not have access to the display class yet!
    }
    
    
    /*
-    * Updates the currentPlayer object, so that it is the same as the player whose turn it is supposed to be.
+    * Updates the currentTurn variable, setting it to 1 or 2. If it was 1 (representative of player 1's turn) it becomes 2, and vice versa.
     */
    private void switchTurns(){
-      if(currentPlayer.equals(player1)){
-         currentPlayer = player2;
+      if(currentTurn == 1){
+         currentTurn = 2;
       }
       else{
-         currentPlayer = player1;
+         currentTurn = 1;
       }
-   }
-   
-   private boolean isGameOver(){
-      return false;
    }
    
    
@@ -74,7 +71,7 @@ public class GameManager{
    public void startGame(){
       gameRunning = true;
       
-      
+      SendHit();
    }
 
 
